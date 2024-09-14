@@ -47,7 +47,7 @@ cp .env.example .env
 
 ### Langkah 6: Migrasi Database
 
-- Buat sebauah Databases Di xampp Terlebih Dahulu
+- Buat sebuah Databases Di xampp Terlebih Dahulu
 
 ```
 php artisan migrate
