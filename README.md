@@ -54,7 +54,7 @@ php artisan migrate
 ```
 ### Langkah 7: Generate Application Key
 
-- Langkah ini sangat penting untuk setiap aplikasi Laravel, karena tanpa kunci ini, beberapa fitur keamanan tidak akan berjalan sebagaimana mestinya jadi harus di jalanka ya perintagnya kalo mau menggunakan Source Code ini ya semoga berhasil :blush: :
+- Langkah ini sangat penting untuk setiap aplikasi Laravel, karena tanpa kunci ini, beberapa fitur keamanan tidak akan berjalan sebagaimana mestinya jadi harus di jalankan ya perintanya kalo mau menggunakan Source Code ini ya semoga berhasil :blush: :
 
 ```
 php artisan key:generate
