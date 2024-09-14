@@ -69,7 +69,7 @@ php artisan serve
 
 
 <p align="center">
-⚠️ **Peringatan:** Pastikan untuk memeriksa semua sesuai dengan urutan agar berjalan lancar.⚠️
+⚠️ <strong>Peringatan:</strong> Pastikan untuk memeriksa semua sesuai dengan urutan agar berjalan lancar.⚠️
 </p>
 <h1 align="center">Semoga Beruntung :blush:</h1>
 
