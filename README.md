@@ -13,9 +13,15 @@
 git clone https://github.com/putravan123/laravel-web-desa.git
 ```
 ### Langkah 2: Pindah ke Direktori Proyek 
+
 ```
 cd laravel-web-desa
 ```
+- Setelah Itu Masuk Ke dalam Visual Studio Code
+
+  ```
+  code .
+  ```
 ### Langkah 3: Instal Dependensi Backend
 ```
 composer install
@@ -44,8 +50,13 @@ cp .env.example .env
 ```
 php artisan migrate
 ```
+### Langkah 7: Generate Application Key
 
-### Langkah 7: Jalankan Server Pengembang
+```
+php artisan key:generate
+```
+
+### Langkah 8: Jalankan Server Pengembang
 
 
 ```
