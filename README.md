@@ -19,14 +19,14 @@ cd laravel-web-desa
 ```
 - Setelah Itu Masuk Ke dalam Visual Studio Code
 
-  ```
-  code .
-  ```
+```
+code .
+```
 ### Langkah 3: Instal Dependensi Backend
 ```
 composer install
 ```
-### Langkah 4: Buat File Konfigurasi Lingkungan (.env)
+### Langkah 4: Buat File Konfigurasi (.env)
 
 ##### Salin file .env.example menjadi .env untuk mengatur variabel lingkungan atau Mengunkan Code berikut:
 
@@ -47,10 +47,14 @@ cp .env.example .env
 
 ### Langkah 6: Migrasi Database
 
+- Buat sebauah Databases Di xampp Terlebih Dahulu
+
 ```
 php artisan migrate
 ```
 ### Langkah 7: Generate Application Key
+
+- Langkah ini sangat penting untuk setiap aplikasi Laravel, karena tanpa kunci ini, beberapa fitur keamanan tidak akan berjalan sebagaimana mestinya jadi harus di jalanka ya perintagnya kalo mau menggunakan Source Code ini ya semoga berhasil :blush: :
 
 ```
 php artisan key:generate
@@ -62,3 +66,11 @@ php artisan key:generate
 ```
 php artisan serve
 ```
+
+
+<p align="center">
+⚠️ **Peringatan:** Pastikan untuk memeriksa semua sesuai dengan urutan agar berhalan lancar.⚠️
+</p>
+<h1 align="center">Semoga Beruntung :blush:</h1>
+
+
