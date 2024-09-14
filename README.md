@@ -10,11 +10,11 @@
 
 ### Langkah 1: Clone Repository 
 ```
-git clone https://github.com/putravan123/Web-Desa-Laravel.git
+git clone https://github.com/putravan123/laravel-web-desa.git
 ```
 ### Langkah 2: Pindah ke Direktori Proyek 
 ```
-cd Web-Desa-Laravel
+cd laravel-web-desa
 ```
 ### Langkah 3: Instal Dependensi Backend
 ```
