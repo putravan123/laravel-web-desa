@@ -26,7 +26,7 @@ code .
 ```
 composer install
 ```
-### Langkah 4: Buat File Konfigurasi (.env)
+### Langkah 4: Copy atau Salin File Konfigurasi (.env)
 
 ##### Salin file .env.example menjadi .env untuk mengatur variabel lingkungan atau Mengunkan Code berikut:
 
@@ -52,16 +52,21 @@ cp .env.example .env
 ```
 php artisan migrate
 ```
-### Langkah 7: Generate Application Key
 
-- Langkah ini sangat penting untuk setiap aplikasi Laravel, karena tanpa kunci ini, beberapa fitur keamanan tidak akan berjalan sebagaimana mestinya jadi harus di jalankan ya perintanya kalo mau menggunakan Source Code ini ya semoga berhasil :blush: :
+### Langkah 7: Buat Strogae Untuk Menyimpan Foto Yang di buat di Crud
+```
+php artisan storage:link
+```
+
+### Langkah 8: Generate Application Key
+
+- Langkah ini sangat penting untuk setiap aplikasi Laravel, karena tanpa kunci ini, beberapa fitur tidak akan berjalan sebagaimana mestinya jadi harus di jalankan ya perintanya kalo mau menggunakan Source Code ini ya semoga berhasil :blush: :
 
 ```
 php artisan key:generate
 ```
 
-### Langkah 8: Jalankan Server Pengembang
-
+### Langkah 9: Jalankan Server Pengembang
 
 ```
 php artisan serve
@@ -69,7 +74,7 @@ php artisan serve
 
 
 <p align="center">
-⚠️ <strong>Peringatan:</strong> Pastikan untuk memeriksa semua sesuai dengan urutan agar berjalan lancar.⚠️
+⚠️ <strong>Peringatan:</strong> Pastikan untuk menjalankan semua sesuai dengan urutan agar berjalan lancar.⚠️
 </p>
 <h1 align="center">Semoga Beruntung :blush:</h1>
 
