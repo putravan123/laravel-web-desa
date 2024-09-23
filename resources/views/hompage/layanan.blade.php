@@ -7,8 +7,8 @@
     <div class="container mt-5">
         <div class="row">
             @foreach ($documents as $item)
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"> 
-                    <div class="card text-center" style="width: 100%;">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-3"> 
+                    <div class="card text-center" style="width: 100%; min-width: 250px;"> <!-- Menambahkan min-width -->
                         <h1 class="my-3">{{ $no++ }}</h1>
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->nama_dokument }}</h5>

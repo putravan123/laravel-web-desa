@@ -1,7 +1,7 @@
 @extends('hompage.template.app')
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container-fluid mt-5"> 
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -25,7 +25,7 @@
         @endif
 
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-12 col-sm-10 col-md-8">
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center">
                         Tambah {{ $documents[$dokumen_id] }}
@@ -34,45 +34,46 @@
                         <form action="{{ route('surat.buat') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="dokumen_id" value="{{ $dokumen_id }}">
+
                             <div class="row mb-3">
-                                <div class="col-md-6">
+                                <div class="col-12 col-md-6">
                                     <label for="nik" class="form-label">NIK</label>
                                     <input type="text" class="form-control" id="nik" name="nik" value="{{ old('nik') }}">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-12 col-md-6">
                                     <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
                                     <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" value="{{ old('nama_lengkap') }}">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
-                                <div class="col-md-6">
+                                <div class="col-12 col-md-6">
                                     <label for="tempat_lahir" class="form-label">Tempat Lahir</label>
                                     <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" value="{{ old('tempat_lahir') }}">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-12 col-md-6">
                                     <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
                                     <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" value="{{ old('tanggal_lahir') }}">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
-                                <div class="col-md-6">
+                                <div class="col-12 col-md-6">
                                     <label for="rt" class="form-label">RT</label>
                                     <input type="text" class="form-control" id="rt" name="rt" value="{{ old('rt') }}">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-12 col-md-6">
                                     <label for="rw" class="form-label">RW</label>
                                     <input type="text" class="form-control" id="rw" name="rw" value="{{ old('rw') }}">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
-                                <div class="col-md-6">
+                                <div class="col-12 col-md-6">
                                     <label for="ktp" class="form-label">KTP (Optional)</label>
                                     <input type="file" class="form-control" id="ktp" name="ktp">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-12 col-md-6">
                                     <label for="kk" class="form-label">KK (Optional)</label>
                                     <input type="file" class="form-control" id="kk" name="kk">
                                 </div>

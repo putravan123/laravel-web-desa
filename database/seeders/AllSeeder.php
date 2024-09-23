@@ -26,22 +26,41 @@ class AllSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'nama' => 'User Biasa',
+                'nama' => 'karyawan',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
+            [
+                'id' =>3,
+                'nama' => 'warga',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]
         ]);
 
         DB::table('users')->insert([
-            'id' => 1,
-            'name' => 'Admin User',
-            'email' => 'admin@example.com',
-            'email_verified_at' => now(),
-            'password' => Hash::make('password'),
-            'remember_token' => Str::random(10),
-            'kategory_id' => 1,
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
+            [
+                'id' => 1,
+                'name' => 'Admin User',
+                'email' => 'admin@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'),
+                'remember_token' => Str::random(10),
+                'kategory_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'id' => 2,
+                'name' => 'Warga',
+                'email' => 'Warga@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'),
+                'remember_token' => Str::random(10),
+                'kategory_id' => 3,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]
         ]);
 
         DB::table('pekerjaan')->insert([

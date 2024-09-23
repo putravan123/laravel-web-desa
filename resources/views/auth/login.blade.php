@@ -12,7 +12,6 @@
     <title>Login</title>
     <style>
         body {
-            /* background: url('path/to/your/background.jpg') no-repeat center center fixed; */
             background-size: cover;
             position: relative;
         }
@@ -24,8 +23,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.6); 
-            backdrop-filter: blur(10px); 
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
             z-index: 1;
         }
 
@@ -39,17 +38,17 @@
         }
 
         .card {
-            background-color: #ffffff; 
-            border: 1px solid #e0e0e0; 
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
         }
 
         .card-title {
-            color: black; 
+            color: black;
         }
 
         .input-group-text {
-            background-color: black; 
-            color: #ffffff; 
+            background-color: black;
+            color: #ffffff;
         }
 
         .input-group-text i {
@@ -72,15 +71,17 @@
         }
 
         .alert-success .alert-link {
-            color: #0c6c44; 
+            color: #0c6c44;
         }
-        .back{
+
+        .back {
             background: black;
             margin-right: 220px;
             text-align: center;
             border-radius: 7px
         }
-        .back a{
+
+        .back a {
             color: #ffffff
         }
     </style>
@@ -91,15 +92,29 @@
         <div class="card p-4 custom-shadow" style="width: 22rem;">
             @if (Session::has('success'))
                 <div class="alert alert-success">
-                    {{Session::get('success')}}
+                    {{ Session::get('success') }}
+                </div>
+            @elseif (Session::has('error'))
+                <div class="alert alert-danger">
+                    {{ Session::get('error') }}
                 </div>
             @endif
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
             <div class="back">
-                <a href="{{route('home')}}" class="text-decoration-none">Kembali</a>
+                <a href="{{ route('home') }}" class="text-decoration-none">Kembali</a>
             </div>
             <h4 class="card-title text-center mb-4">Login</h4>
             <form action="{{ route('login') }}" method="post">
-                
+
                 @csrf
                 <div class="mb-3">
                     <label for="login" class="form-label">Nama Atau Email</label>
@@ -128,7 +143,7 @@
     </div>
 
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{asset('js/newFile.js')}}"></script>
+    <script src="{{ asset('js/newFile.js') }}"></script>
 </body>
 
 </html>

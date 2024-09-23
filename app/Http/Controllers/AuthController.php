@@ -149,6 +149,8 @@ class AuthController extends Controller
         $request->validate([
             'login' => 'required|string|max:255',
             'password' => 'required|string|min:8',
+        ],[
+            'password.min'=>'password minimal 8'
         ]);
         
         $type = filter_var($request->input('login'), FILTER_VALIDATE_EMAIL) ? 'email':'name';
@@ -159,8 +161,13 @@ class AuthController extends Controller
         ];
 
         if (Auth::attempt($cek)) {
-            $request->session()->regenerate();
-            return redirect()->route('dashboard')->with('success', 'Berhasil Login');        
+            $user = Auth::user();
+
+            if ($user->kategory_id == 1 || $user->kategory_id == 2) {
+                return redirect()->route('dashboard')->with('success', 'Login as Admin Successfully');
+            } else {
+                return redirect()->route('home')->with('success', 'Login Successfully');
+            }       
         }
         return redirect()->back()->with('error','maaf Kata sandi Atau Email Salah');
     }

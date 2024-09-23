@@ -391,3 +391,29 @@
     padding-right: 0;
     border-right: none;
 }
+
+
+
+/*** style navbar ***/
+
+.navbar-brand img {
+    max-height: 50px; 
+    width: auto; 
+}
+
+.navbar {
+    justify-content: space-between; 
+}
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        margin-left: 15px; 
+    }
+
+    .navbar-toggler {
+        margin-right: 15px; 
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+}
