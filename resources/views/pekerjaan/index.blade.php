@@ -3,7 +3,6 @@
 @section('content')
 <div class="card shadow mb-4">
     <div class="card-header py-3 d-flex justify-content-between align-items-center">
-        <!-- Tombol untuk menambah pengguna baru -->
         <a href="{{ route('pekerjaan.create') }}" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Buat Pekerjaan</a>
         <div style="margin-left: 10px">
             <form action="{{ route('pekerjaan.index') }}" method="GET">
@@ -15,7 +14,6 @@
                 </select>
             </form>
         </div>
-        <!-- Form Pencarian -->
         <form action="{{ route('pekerjaan.index') }}" method="GET" class="d-flex mb-0 ml-auto">
             <div class="input-group">
                 <input type="text" name="search" placeholder="Cari Pekerjaan" value="{{ request('search') }}" class="form-control">
@@ -60,7 +58,6 @@
             </table>
         </div>
 
-        <!-- Menampilkan Pagination -->
         <div class="d-flex justify-content-center">
             {{ $pekerjaans->links('pagination::bootstrap-4') }}
         </div>

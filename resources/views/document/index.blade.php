@@ -3,10 +3,7 @@
 @section('content')
 <div class="card shadow mb-4">
     <div class="card-header py-3 d-flex justify-content-between align-items-center">
-        <!-- Button to create a new document -->
         <a href="{{ route('document.create') }}" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Buat Dokumen Baru</a>
-        
-        <!-- Dropdown for selecting pagination size -->
         <div style="margin-left: 10px">
             <form action="{{ route('document.index') }}" method="GET">
                 <select name="p" onchange="this.form.submit()">
@@ -17,8 +14,6 @@
                 </select>
             </form>
         </div>
-        
-        <!-- Search form -->
         <form action="{{ route('document.index') }}" method="GET" class="d-flex mb-0 ml-auto">
             <div class="input-group">
                 <input type="text" name="search" placeholder="Cari Dokumen" value="{{ request('search') }}" class="form-control">
@@ -65,7 +60,6 @@
             </table>
         </div>
 
-        <!-- Pagination -->
         <div class="d-flex justify-content-center">
             {{ $documents->links('pagination::bootstrap-4') }}
         </div>

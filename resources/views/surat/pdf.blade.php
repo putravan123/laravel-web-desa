@@ -12,7 +12,7 @@
         body {
             font-family: "Times New Roman", Times, serif;
             font-size: 14px;
-            margin: 0; /* Menghilangkan margin default */
+            margin: 0; 
             padding: 0;
             color: #000000;
         }

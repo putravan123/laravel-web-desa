@@ -3,10 +3,8 @@
 @section('content')
 <div class="card shadow mb-4">
     <div class="card-header py-3 d-flex justify-content-between align-items-center">
-        <!-- Tombol untuk menambah jenis surat baru -->
         <a href="{{ route('jenis.create') }}" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Buat Jenis Surat Baru</a>
         
-        <!-- Dropdown untuk memilih jumlah item per halaman -->
         <div style="margin-left: 10px">
             <form action="{{ route('jenis.index') }}" method="GET">
                 <select name="p" onchange="this.form.submit()" class="form-select">
@@ -18,7 +16,6 @@
             </form>
         </div>
         
-        <!-- Form Pencarian -->
         <form action="{{ route('jenis.index') }}" method="GET" class="d-flex mb-0 ml-auto">
             <div class="input-group">
                 <input type="text" name="search" placeholder="cari" value="{{ request('search') }}" class="form-control">
@@ -63,7 +60,6 @@
             </table>
         </div>
 
-        <!-- Menampilkan Pagination -->
         <div class="d-flex justify-content-center">
             {{ $jenis->links('pagination::bootstrap-4') }}
         </div>
